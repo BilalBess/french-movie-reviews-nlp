@@ -1,0 +1,6 @@
+model,val_accuracy,val_f1
+Majority class,0.4898,0.6575
+Naive Bayes (word),0.9274,0.9259
+Logistic regression (word),0.944,0.9433
+Linear SVM (word),0.9452,0.9444
+Linear SVM (word + char),0.9462,0.9455
