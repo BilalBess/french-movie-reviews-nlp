@@ -1,5 +1,7 @@
 # Sentiment Analysis of French Movie Reviews (Allocine)
 
+[![CI](https://github.com/BilalBess/french-movie-reviews-nlp/actions/workflows/ci.yml/badge.svg)](https://github.com/BilalBess/french-movie-reviews-nlp/actions/workflows/ci.yml)
+
 Classify **200,000 French movie reviews** as positive or negative with classic NLP (TF-IDF + linear models), then study *where and why* the model fails.
 
 ## Why this project
@@ -60,6 +62,13 @@ With 5,000 reviews we already get 90%, and doubling the data from 80k to 160k gi
 pip install -r requirements.txt
 python src/run.py      # downloads about 75 MB, takes about 10 minutes (char n-grams are slow)
 ```
+
+## Tests
+```bash
+pip install pytest
+pytest -q
+```
+The tests cover the text cleaning and that bigrams can capture a simple negation. They run on every push with GitHub Actions (`.github/workflows/ci.yml`: lint with ruff, then pytest).
 
 ## Skills shown
 Text preprocessing, TF-IDF, n-grams, model comparison with a proper validation/test protocol, learning curves, qualitative error analysis, spotting label noise.
